@@ -27,7 +27,7 @@
 
 <img width="973" alt="screen shot 2016-08-11 at 6 06 57 pm" src="https://cloud.githubusercontent.com/assets/499550/17607895/786a415a-5fee-11e6-9c11-45a2cfdf085c.png">
 
-**详细的Vue SSR指南可以在 [here](https://ssr.vuejs.org)找到
+**详细的Vue SSR指南可以在 [这里](https://ssr.vuejs.org)找到
 
 ## Build Setup
 
