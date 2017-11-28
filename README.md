@@ -1,31 +1,33 @@
-# Vue-Ssr-1.0
+# node-express-redis
 
-## 特征
+## 描述
 
-> 注意：实际上，对于这种大小的应用程序（每个异步块只有几千字节），没有必要进行代码分割，也不是提取额外的CSS文件（只有1kb） - 它们是只是因为这是一个演示应用程序展示所有支持的功能。在真实应用程序中，您应该始终根据实际的应用程序限制进行测量和优化。
+> vue-ssr,做的一个兼容SEO的Demo,这个例子中，将express的服务器端路由和vue-router路由进行合并，可以自定义Header标签中的meta，后续我会将请求接口的东西一一陆续完善。
 
-- 服务器端渲染
-  - Vue + vue-router + vuex一起工作
-  - 服务器端数据预取
-  - Client-side state & DOM 混合
-  - Automatically inlines CSS used by rendered components only   自动内联由渲染组件使用的CSS
-  - Preload / prefetch resource hints   预加载/预取资源提示
-  - Route-level code splitting   路由级代码分割
-- Progressive Web App  渐进的Web应用程序
-  - App manifest   应用清单
-  - Service worker   服务人员
-  - 100/100 Lighthouse score  100/100灯塔比分
-- Single-file Vue Components  单文件Vue组件
-  - Hot-reload in development  在开发中重新加载
-  - CSS extraction for production  CSS提取生产
-- Animation  动画
-  - Effects when switching route views   切换路由视图时的效果
-  - Real-time list updates with FLIP Animation   实时列表更新与FLIP动画
+- 项目相关文件夹
+  - src/app.js：工厂函数，生成vue实例
+  - src/entry-client.js：前端入口文件
+  - src/entry-server.js：服务端入口文件
+  - src/index.template.html：模板文件
+  - src/App.vue：根实例文件
+  - src/views：vue-router下面的模板文件
+  - src/components：项目存放的一些组件
+  - src/api：调取接口的文件
+  - src/router：vue路由文件夹
+  - src/store：vuex文件夹，状态管理
+  - src/utils：工具
+  - config：各个不同环境的配置文件（beta：测试环境；prod：生产环境）
+  - node_modules：node依赖的包
+  - build：项目打包工具webpack入口文件
+  - public：静态资源文件夹，这里存放一些例如图片之类
+  - dist：静态资源文件夹，打包生成的文件
+  - app.js:入口文件
 
-## 架构概述
+## 项目架构，这里借鉴的是官方文档的项目架构图
 
 <img width="973" alt="screen shot 2016-08-11 at 6 06 57 pm" src="https://cloud.githubusercontent.com/assets/499550/17607895/786a415a-5fee-11e6-9c11-45a2cfdf085c.png">
 
+**详细的Vue SSR指南可以在 [here](https://ssr.vuejs.org)找到
 
 ## Build Setup
 
@@ -33,7 +35,7 @@
 
 ``` bash
 # install dependencies
-npm install
+npm install # or yarn
 
 # serve in dev mode, with hot reload at localhost:8080
 npm run dev
