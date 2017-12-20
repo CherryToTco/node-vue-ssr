@@ -31,6 +31,12 @@
 								<td v-for="item in product.data">
 									<div>{{item.value}}</div>
 								</td>
+								<td>
+									<input type="number" v-model="product.price"/>
+								</td>
+								<td>
+									<input type="number" v-model="product.number"/>
+								</td>
 							</tr>
 						</template>
 					</tbody>
@@ -152,6 +158,7 @@
 		          }]
 		        }],
 				productSkuTable:[],
+
 			}
 		},
 		methods:{
@@ -175,6 +182,10 @@
 		}
 		td{
 			text-align: center;
+			width: 150px;
+			input{
+				width:80px;
+			}
 		}
 	}
 </style>

@@ -47,8 +47,8 @@
 				let initListData = this.initListData();
 				initListData.map(function(item,index){
 					let obj = {};
-					obj['productPrice'] = '';
-					obj['productNumber'] = '';
+					obj['price'] = '';
+					obj['number'] = '';
 					obj['productOnceSelect'] = false;
 					obj['data'] = item;
 					initskuList.push(obj);
@@ -126,6 +126,12 @@
     	dealWithSkuList (dataList){
     		let list = dataList;
     		let returnArr = new Array();
+        dataList.forEach(function(item,index){
+          if(!item.productOnceSelect){
+            item['price'] = '';
+            item['number'] = '';
+          }
+        });
     		dataList.forEach(function(item,index){
     			if(item.productOnceSelect){
     				returnArr.push(item);
